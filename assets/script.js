@@ -6,7 +6,7 @@ let uppercase= "abcdefghijklmnopqrstuvwxyz";
 let number= "1234567890"; 
 let special= "!@#$%^&*()_-+=?/.,><[]{}~"; 
 
-let chooselength= 0;
+// let chooseLength= 0;
 // let chooselowercase= false;
 // let chooseuppercase= false;
 // let choosespecial= false;
@@ -16,58 +16,49 @@ let chooselength= 0;
 // PASSWORD CRITERIA PROMPTS //
 //Length of Password? 8-128 characters //
 function charactercheck (){
-  let chooselength = prompt ("How many characters would you like to include (minimum: 8, maximum: 128) "); 
-}
-  if (chooselength >= 8 || chooselength <=128) {
-    alert("Password must be between 8-128 characters");
-    charactercheck();
-    // console.log(chooselength);
-  } 
-  else if (chooselength = ""){
-    alert("You must answer with a number between 8-128.");
-    charactercheck();
+  let chooseLength = parseInt(prompt ("How many characters would you like to include (minimum: 8, maximum: 128) ")); 
+  if (isNaN(chooseLength)){
+    alert("Please choose a number between 8-128.");
+    return;
   }
-  //   else if (isNaN(chooselength)){
-  //   alert ("You must enter a number between 8-128");
-  // }
+  if (chooseLength <= 8 || chooseLength >=128) {
+      alert("Password must be between 8-128 characters");
+      return;
+    }
+return chooseLength
+    
+  }
 
 //Include lowercase, uppercase, numeric, and/or special characters?//
-function confirmlowercase () {
-  let chooselowercase = window.confirm("Would you like to include lowercase letters?");
+function characters () {
+  let chooseLowercase = window.confirm("Would you like to include lowercase letters?");
+  let chooseUppercase = window.confirm("Would you like to include uppercase letters?");
+  let chooseNumber = window.confirm("Would you like to include numbers?"); 
+  let chooseSpecial = window.confirm("Would you like to include special characters?");
+let word = "";
+console.log(chooseLowercase);
+  if (chooseLowercase) {
+    word += lowercase;
+  }
+  if (chooseUppercase) {
+    word += uppercase;
+  }
+  if (chooseNumber) {
+    word += number;
+  }
+  if (chooseSpecial) {
+    word += special;
+  }
+
+  return word;
 }
-  // if (chooselowercase === ""){
-  //   alert("You must answer yes or no.");
-  // }
-  // else if (chooselowercase = "yes"){
-  //   chooselowercase = true; 
-  // }
-  // else if (chooselowercase = "no"){
-  //   chooselowercase = false; 
-  // }
-function confirmUppercase (){
-  let chooseuppercase = window.confirm("Would you like to include uppercase letters?");
-}
-  //   if (chooseuppercase = ""){
-  //   alert("You must answer yes or no.");
-  // } 
-  //   else if (chooseuppercase = "yes"){
-  //   chooseuppercase = true; 
-  // }
-  //   else if (chooseuppercase = "no"){
-  //   chooseuppercase = false; 
-  
-function confirmNumber(){
-  let choosenumber = window.confirm("Would you like to include numbers?"); 
-}
-  //   if (choosenumber = ""){
-  //     alert("You must answer yes or no.");
-  // }
-  // let choosespecial = window.confirm("Would you like to include special characters?"); 
-  //   if (choosespecial = ""){
-  //     alert("You must answer yes or no.");
 
 
-// function generatePassword(){
+
+function generatePassword(){
+  let chooseLength = charactercheck();
+  let word = characters(); 
+
 //   chooselength();
 //     console.log(chooselength);
 //   chooselowercase(); 
@@ -78,7 +69,7 @@ function confirmNumber(){
 //     console.log(choosenumber);
 //   choosespecial();
 //     console.log(choosespecial);
-// }
+}
 
 
 
