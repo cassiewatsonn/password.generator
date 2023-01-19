@@ -6,37 +6,79 @@ let uppercase= "abcdefghijklmnopqrstuvwxyz";
 let number= "1234567890"; 
 let special= "!@#$%^&*()_-+=?/.,><[]{}~"; 
 
-// let chooselength= number;
-// let chooselowercase= lowercase;
-// let chooseuppercase= uppercase;
-// let choosespecial= special;
+let chooselength= 0;
+// let chooselowercase= false;
+// let chooseuppercase= false;
+// let choosespecial= false;
 
 
 
 // PASSWORD CRITERIA PROMPTS //
 //Length of Password? 8-128 characters //
-let chooselength = prompt("How many characters would you like to include (minimum: 8, maximum: 128) "); 
-  if (chooselength < 8 || chooselength >128) {
+function charactercheck (){
+  let chooselength = prompt ("How many characters would you like to include (minimum: 8, maximum: 128) "); 
+}
+  if (chooselength >= 8 || chooselength <=128) {
     alert("Password must be between 8-128 characters");
+    charactercheck();
+    // console.log(chooselength);
   } 
+  else if (chooselength = ""){
+    alert("You must answer with a number between 8-128.");
+    charactercheck();
+  }
   //   else if (isNaN(chooselength)){
   //   alert ("You must enter a number between 8-128");
   // }
+
 //Include lowercase, uppercase, numeric, and/or special characters?//
-let chooselowercase = prompt("Would you like to include lowercase letters?");
-let chooseuppercase = prompt("Would you like to include uppercase letters?"); 
-let choosenumber = prompt("Would you like to include numbers?"); 
-let choosespecial = prompt("Would you like to include special characters?"); 
-
-
-function generatePassword(){
-  // chooselength();
-  // chooselowercase(); 
-  // chooseuppercase();
-  // choosenumber();
-  // choosespecial();
-
+function confirmlowercase () {
+  let chooselowercase = window.confirm("Would you like to include lowercase letters?");
 }
+  // if (chooselowercase === ""){
+  //   alert("You must answer yes or no.");
+  // }
+  // else if (chooselowercase = "yes"){
+  //   chooselowercase = true; 
+  // }
+  // else if (chooselowercase = "no"){
+  //   chooselowercase = false; 
+  // }
+function confirmUppercase (){
+  let chooseuppercase = window.confirm("Would you like to include uppercase letters?");
+}
+  //   if (chooseuppercase = ""){
+  //   alert("You must answer yes or no.");
+  // } 
+  //   else if (chooseuppercase = "yes"){
+  //   chooseuppercase = true; 
+  // }
+  //   else if (chooseuppercase = "no"){
+  //   chooseuppercase = false; 
+  
+function confirmNumber(){
+  let choosenumber = window.confirm("Would you like to include numbers?"); 
+}
+  //   if (choosenumber = ""){
+  //     alert("You must answer yes or no.");
+  // }
+  // let choosespecial = window.confirm("Would you like to include special characters?"); 
+  //   if (choosespecial = ""){
+  //     alert("You must answer yes or no.");
+
+
+// function generatePassword(){
+//   chooselength();
+//     console.log(chooselength);
+//   chooselowercase(); 
+//     console.log(chooselowercase);
+//   chooseuppercase();
+//     console.log(chooseuppercase);
+//   choosenumber();
+//     console.log(choosenumber);
+//   choosespecial();
+//     console.log(choosespecial);
+// }
 
 
 
