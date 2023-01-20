@@ -2,7 +2,7 @@
 let generateBtn = document.querySelector("#generate");
 //Lowercase, uppercase, numbers and special character variables//
 let lowercase= "abcdefghijklmnopqrstuvwxyz"; 
-let uppercase= "abcdefghijklmnopqrstuvwxyz"; 
+let uppercase= lowercase.toUpperCase();
 let number= "1234567890"; 
 let special= "!@#$%^&*()_-+=?/.,><[]{}~"; 
 
@@ -30,26 +30,31 @@ return chooseLength
 
 //Include lowercase, uppercase, numeric, and/or special characters?//
 function characters () {
-  let chooseLowercase = window.confirm("Would you like to include lowercase letters?");
-  let chooseUppercase = window.confirm("Would you like to include uppercase letters?");
-  let chooseNumber = window.confirm("Would you like to include numbers?"); 
-  let chooseSpecial = window.confirm("Would you like to include special characters?");
+  let chooseLowercase = confirm("Would you like to include lowercase letters?");
+  let chooseUppercase = confirm("Would you like to include uppercase letters?");
+  let chooseNumber = confirm("Would you like to include numbers?"); 
+  let chooseSpecial = confirm("Would you like to include special characters?");
 let word = "";
 console.log(chooseLowercase);
   if (chooseLowercase) {
     word += lowercase;
+    console.log("line 41" + word);
   }
   if (chooseUppercase) {
     word += uppercase;
+    console.log("line 45" + word);
   }
   if (chooseNumber) {
     word += number;
+    console.log("line 49" + word);
   }
   if (chooseSpecial) {
     word += special;
+    console.log("line 53" + word);
   }
-
+  console.log("line 55" + word);
   return word;
+ 
 }
 
 function generatePassword(){
