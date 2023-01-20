@@ -60,6 +60,11 @@ console.log(chooseLowercase);
 function generatePassword(){
   let chooseLength = charactercheck();
   let word = characters(); 
+  let password= ""; 
+  for (let i=0; i < chooseLength; i++){
+    password += word[Math.floor(Math.random() * word.length)];
+  }
+  return password;
 }
 
 // Write password to the #password input
