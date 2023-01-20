@@ -6,11 +6,10 @@ let uppercase= "abcdefghijklmnopqrstuvwxyz";
 let number= "1234567890"; 
 let special= "!@#$%^&*()_-+=?/.,><[]{}~"; 
 
-// let chooseLength= 0;
-// let chooselowercase= false;
-// let chooseuppercase= false;
-// let choosespecial= false;
-
+// let chooseLength;
+// let chooselowercase;
+// let chooseuppercase;
+// let choosespecial;
 
 
 // PASSWORD CRITERIA PROMPTS //
@@ -28,10 +27,6 @@ function charactercheck (){
 return chooseLength
     
   }
-  // for (var i = 0; i <= chooseLength; i++) {
-  //   let randomPass = Math.floor(Math.random() * characters.length); 
-  //   word += characters.substring(randomNumber, randomNumber +1);
-  // }
 
 //Include lowercase, uppercase, numeric, and/or special characters?//
 function characters () {
@@ -57,22 +52,17 @@ console.log(chooseLowercase);
   return word;
 }
 
-
 function generatePassword(){
   let chooseLength = charactercheck();
   let word = characters(); 
 }
 
-
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
-
 }
-
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
