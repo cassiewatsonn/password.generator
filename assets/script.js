@@ -21,13 +21,17 @@ function charactercheck (){
     alert("Please choose a number between 8-128.");
     return;
   }
-  if (chooseLength <= 8 || chooseLength >=128) {
+  if (chooseLength <=8 || chooseLength >=128) {
       alert("Password must be between 8-128 characters");
       return;
     }
 return chooseLength
     
   }
+  // for (var i = 0; i <= chooseLength; i++) {
+  //   let randomPass = Math.floor(Math.random() * characters.length); 
+  //   word += characters.substring(randomNumber, randomNumber +1);
+  // }
 
 //Include lowercase, uppercase, numeric, and/or special characters?//
 function characters () {
@@ -54,23 +58,10 @@ console.log(chooseLowercase);
 }
 
 
-
 function generatePassword(){
   let chooseLength = charactercheck();
   let word = characters(); 
-
-//   chooselength();
-//     console.log(chooselength);
-//   chooselowercase(); 
-//     console.log(chooselowercase);
-//   chooseuppercase();
-//     console.log(chooseuppercase);
-//   choosenumber();
-//     console.log(choosenumber);
-//   choosespecial();
-//     console.log(choosespecial);
 }
-
 
 
 // Write password to the #password input
@@ -81,9 +72,6 @@ function writePassword() {
   passwordText.value = password;
 
 }
-
-
-
 
 
 // Add event listener to generate button
