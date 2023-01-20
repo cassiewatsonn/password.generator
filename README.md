@@ -19,6 +19,7 @@ To use this Password Generator, you can click "Generate Password" to create a st
 ## ![Password Generator](./assets/03-javascript-homework-demo.png)
 
 ## Link 
+https://cassiewatsonn.github.io/password.generator/
 
 
 ## Credits 
