@@ -6,10 +6,6 @@ let uppercase= lowercase.toUpperCase();
 let number= "1234567890"; 
 let special= "!@#$%^&*()_-+=?/.,><[]{}~"; 
 
-// let chooseLength;
-// let chooselowercase;
-// let chooseuppercase;
-// let choosespecial;
 
 
 // PASSWORD CRITERIA PROMPTS //
@@ -38,23 +34,17 @@ let word = "";
 console.log(chooseLowercase);
   if (chooseLowercase) {
     word += lowercase;
-    console.log("line 41" + word);
   }
   if (chooseUppercase) {
     word += uppercase;
-    console.log("line 45" + word);
   }
   if (chooseNumber) {
     word += number;
-    console.log("line 49" + word);
   }
   if (chooseSpecial) {
     word += special;
-    console.log("line 53" + word);
   }
-  console.log("line 55" + word);
   return word;
- 
 }
 
 function generatePassword(){
